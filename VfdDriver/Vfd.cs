@@ -6,7 +6,7 @@ using System.IO.Ports;
 namespace VfdDriver
 {
     public delegate void ErrorEventHandler(object sender, string error);
-    public delegate void ReceieveEventHandler(object sender, byte[] buffer, int bytes_read);
+    public delegate void ReceiveEventHandler(object sender, byte[] buffer, int bytes_read);
 
     public class Vfd
     {
@@ -66,7 +66,7 @@ namespace VfdDriver
         /// <summary>
         /// Event for processing data received by the VFD (VFD doesn't send data).
         /// </summary>
-        public event ReceieveEventHandler ReceiveEvent;
+        public event ReceiveEventHandler ReceiveEvent;
 
         /// <summary>
         /// Publish error message to event handler.
